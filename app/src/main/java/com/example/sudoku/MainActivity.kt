@@ -300,6 +300,8 @@ class MainActivity : AppCompatActivity() {
         notNullCount = 81-sudokuNull.myCount(0)
         if (notNullCount != 81) {
             cellsText.text="$notNullCount/81 (-${81-notNullCount})"
+        } else {
+            cellsText.text = ""
         }
     }
 
