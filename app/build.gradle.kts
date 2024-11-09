@@ -59,7 +59,7 @@ chaquopy {
 dependencies {
 
     implementation(libs.androidx.core.splashscreen)
-    implementation("com.google.code.gson:gson:2.8.6")
+    implementation("com.google.code.gson:gson:2.10.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
