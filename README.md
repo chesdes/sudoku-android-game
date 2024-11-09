@@ -1,6 +1,6 @@
 <h1 align="center">🔢Sudoku chds</h1>
 <div align="center">
-  <img src="https://github.com/chesdes/sudoku-android-game/blob/pic/sudoku.png" width=500px />
+  <img src="https://github.com/chesdes/sudoku-android-game/blob/master/pics/sudoku.png" width=500px />
 </div>
 
 ## 📍About
@@ -10,6 +10,7 @@
 
 ## 🖼Screenshots:
 <div align="center">
-  <img src="https://github.com/chesdes/sudoku-android-game/blob/pic/1.png" width=250px />
-  <img src="https://github.com/chesdes/sudoku-android-game/blob/pic/2.png" width=250px />
+  <img src="https://github.com/chesdes/sudoku-android-game/blob/master/pics/1.png" width=250px />
+  <img src="https://github.com/chesdes/sudoku-android-game/blob/master/pics/2.png" width=250px />
+  <img src="https://github.com/chesdes/sudoku-android-game/blob/master/pics/3.png" width=250px />
 </div>
