@@ -145,6 +145,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<View>(android.R.id.content).post {
             drawSudoku()
+            updateNumberButtons()
         }
     }
 
@@ -188,16 +189,13 @@ class MainActivity : AppCompatActivity() {
                                     sudokuNull[i * 9 + j] = currentNum.toInt()
                                     button.text = currentNum
                                     clearSudoku()
-                                    var count = 0
+                                    updateNumberButtons()
                                     for (btn in sudokuButtons) {
                                         if (button.text != "" && btn.first.text == button.text) {
-                                            count += 1
                                             btn.first.background = sudokuCellAltDrawable
                                         }
                                     }
-                                    if (count == 9) {
-                                        numberButtons[currentNum.toInt() - 1].background =
-                                            buttonNumberTrue
+                                    if (numberButtons[currentNum.toInt()-1].background == buttonNumberTrue) {
                                         currentNum = ""
                                     }
                                     updateCells()
@@ -321,8 +319,19 @@ class MainActivity : AppCompatActivity() {
         return result
     }
 
-    @Suppress("KotlinConstantConditions")
-    private fun <T> Array<T>.myCount(element: Int): Int {
+    private fun updateNumberButtons() {
+        var arr : Array<String> = arrayOf()
+        for (sud in sudokuButtons) {
+            arr += sud.first.text.toString()
+        }
+        for (numB in numberButtons) {
+            if (arr.myCount(numB.text.toString()) == 9) {
+                numB.background = buttonNumberTrue
+            }
+        }
+    }
+
+    private fun <T> Array<T>.myCount(element: Any): Int {
         var count = 0
         for (item in this) {
             if (item == element) {
